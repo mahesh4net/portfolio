@@ -955,6 +955,9 @@ footer a:hover {
         display: block;
     }
   
+    .hero{
+        margin-top: 60px;
+    }
    
 
     .hero .name {
@@ -1038,6 +1041,10 @@ footer a:hover {
     .nav-links-mobile{
         min-width: 50%;
 
+    }
+
+    .hero{
+        margin-top: 10px;
     }
 
     .hero .name {
