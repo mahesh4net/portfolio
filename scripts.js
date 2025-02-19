@@ -8,15 +8,14 @@ const navLinks= document.querySelector('.nav-links-mobile')
 
 
 function openMenu(){
-    menuOpenBtn.style.display = 'none'
-    menuCloseBtn.style.display = 'block'
+    menuOpenBtn.classList.add('hide')
+    menuCloseBtn.classList.remove('hide')
     navLinks.classList.remove('hide')
     console.log('hello')
 }
 function closeMenu(){
-    menuCloseBtn.style.display = 'none'
-
-    menuOpenBtn.style.display = 'block'
+    menuCloseBtn.classList.add('hide')
+    menuOpenBtn.classList.remove('hide')
     navLinks.classList.add('hide')
 
 }
