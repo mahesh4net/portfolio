@@ -1,3 +1,39 @@
+
+
+
+
+const menuOpenBtn= document.querySelector('.menu-open')
+const menuCloseBtn= document.querySelector('.menu-close')
+const navLinks= document.querySelector('.nav-links-mobile')
+
+
+function openMenu(){
+    menuOpenBtn.style.display = 'none'
+    menuCloseBtn.style.display = 'block'
+    navLinks.classList.remove('hide')
+    console.log('hello')
+}
+function closeMenu(){
+    menuCloseBtn.style.display = 'none'
+
+    menuOpenBtn.style.display = 'block'
+    navLinks.classList.add('hide')
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let isSyncing = false; // Prevents infinite loop
 

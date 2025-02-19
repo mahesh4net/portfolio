@@ -117,10 +117,39 @@ font-family: Inter-Bold;
     color: #00ff88;
 }
 
+.nav-links-mobile{
+    display: none;
+    z-index: 10;
+}
 .nav-hr{
 border: none;
 border-top: 2px solid rgba(255, 255, 255, 0.195);
 }
+
+
+
+.menu-close:hover{
+    cursor: pointer;
+}
+.menu-open:hover{
+    cursor: pointer;
+
+}
+
+.menu-btns{
+    display: none;
+}
+.fa-bars{
+    font-size: 1.3rem;
+}
+.fa-x{
+    font-size: 1.3rem;
+}
+
+.hide{
+    display: none !important;
+}
+
 
 /* Hero Section */
 .hero {
@@ -761,62 +790,21 @@ footer a:hover {
 
 
 /* Responsive Design */
-@media (max-width: 1920px) {
-    .container {
-        padding: 0 50px;
-    }
+@media (max-width: 1440px) {
+.description{
+    font-size: 1.8rem;
+}
 
-    .navbar .logo {
-        font-size: 2.5rem;
-    }
+.about-image{
+    width: 350px;
 
-    .nav-links {
-        gap: 30px;
-    }
+}
 
-    .hero .name {
-        font-size: 6rem;
-    }
+.logo-slider .swiper-slide{
+    border: 8px solid rgb(58, 57, 57);
+}
 
-    .description {
-        font-size: 2rem;
-    }
 
-    .about .about-content {
-        max-width: 50%;
-    }
-
-    .about-image {
-        width: 300px;
-    }
-
-    .skills-section .skill-section-title {
-        font-size: 2.5rem;
-    }
-
-    .skills-sliders .text-slider-container {
-        width: 50%;
-    }
-
-    .skills-sliders .logo-slider-container {
-        width: 50%;
-    }
-
-    .projects .project {
-        gap: 30px;
-    }
-
-    .projects .project .thumbnail {
-        max-width: 45%;
-    }
-
-    .projects .project-details {
-        flex: 1;
-    }
-
-    .contact-section .form-wrapper {
-        max-width: 50%;
-    }
 }
 
 /* Responsive Design for Tablets */
@@ -830,11 +818,28 @@ footer a:hover {
     }
 
     .hero .name {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .description {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .specialization p{
+        font-size: 1.2rem;
+    }
+
+    .resume{
+        font-size: 1rem;
+    }
+
+
+    .resume img{
+        width: 25px;
+    }
+
+    .about-content .section-title{
+        font-size: 1.5rem;
     }
 
     .about .about-content {
@@ -842,23 +847,34 @@ footer a:hover {
     }
 
     .about-image {
-        width: 250px;
+        width: 300px;
     }
 
     .skills-section .skill-section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .skills-sliders .text-slider-container {
         width: 60%;
     }
 
-    .projects .project {
+    .text-slider h2{
+        font-size: 1.2rem;
+    }
+    .text-slider p{
+        font-size: 1.1rem;
+    }
+
+    .logo-slider{
+        width: 70%;
+    }
+
+     .project {
         flex-direction: column;
         text-align: center;
     }
 
-    .projects .project .thumbnail {
+     .project .thumbnail {
         max-width: 100%;
     }
 
@@ -877,17 +893,63 @@ footer a:hover {
         font-size: 1.5rem;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 20px;
+    .navbar{
+        position: relative;
+
     }
 
+    .menu-btns{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links-mobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        transform: translateY(100%);
+        min-width: 30%;
+        text-align: center;
+        background-color: rgb(34, 33, 33);
+        padding: 1rem;
+        border-radius: 1rem;
+        font-family: Inter-Light;
+        gap: 0;
+    }
+
+    .nav-links-mobile a{
+        font-family: Inter-Light;
+        font-weight: 200;
+        width: 100%;
+        display: block;
+        padding: 0.8rem;
+        border-radius: 1.5rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links-mobile a:hover{
+        background-color: rgb(63, 63, 63);
+    }
+
+    .menu-open{
+        display: block;
+    }
+
+  
+   
+
     .hero .name {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .description {
-        font-size: 1.6rem;
+        font-size: 1.35rem;
     }
 
     .about {
@@ -919,6 +981,11 @@ footer a:hover {
     .skills-sliders .logo-slider-container {
         width: 100%;
     }
+
+    .logo-slider{
+        width: 40%;
+    }
+
 
     #projects{
         display: flex;
@@ -955,31 +1022,90 @@ footer a:hover {
     }
 
     .hero .name {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .hero .intro-text{
+        font-size: 1.1rem;
+
     }
 
     .description {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
+    .specialization p{
+        font-size: 1rem;
+    }
+
+   .specialization p:first-child span {
+    display: none;
+   }
+
+  
+
+   .resume{
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-inline: 0;
+
+   }
+
+   .resume img{
+    width: 20px;
+   }
+
+
+   .about{
+    padding-block: 2.5rem;
+   }
+   .about .section-title{
+    font-size: 1.3rem;
+   }
+
+   .about p{
+    font-size: 1rem;
+   }
     .about .about-content {
         max-width: 100%;
     }
 
     .about-image {
-        width: 200px;
+        width: 250px;
     }
 
     .skills-section .skill-section-title {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .skills-sliders .text-slider-container {
         width: 100%;
     }
 
+    .text-slider p{
+        font-size: 0.95rem;
+        font-weight: 300;
+    }
+    .text-slider h2{
+        font-size: 1.1rem;
+    }
+
+    .text-slider .swiper-slide{
+        gap: 0.3rem;
+        text-align: left;
+    }
     .skills-sliders .logo-slider-container {
         width: 100%;
+    }
+
+    .logo-slider{
+        width: 50%;
+    }
+
+
+
+    .logo-slider .swiper-slide{
+      border: 5px solid rgb(46, 46, 46);
     }
 
     .projects .project {
@@ -991,10 +1117,74 @@ footer a:hover {
         max-width: 100%;
     }
 
+    .project p{
+        font-size: 0.95rem;
+    }
+
+    .project-section-title{
+        font-size: 1.3rem;
+        margin-bottom: 0rem;
+    }
+  
+
+    .project h3{
+        font-size: 1.1rem;
+
+    }
+
+    .project .project-btn{
+        font-size: 0.9rem;
+    }
+
     .contact-section{
         padding: 0;
     }
+
+    .contact-section h2{
+        font-size: 1.3rem;
+    }
+
+    .contact-section label{
+        font-size: 0.95rem;
+    }
+    .contact-section input{
+        font-size: 0.95rem;
+    }
+    .contact-section .error-message{
+        font-size: 0.9rem;
+    }
+    .contact-section #result{
+        font-size: 0.9rem;
+    }
+
+
+
+    .contact-section p{
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+    }
     .contact-section .form-wrapper {
         max-width: 100%;
+        padding: 1rem;
+    }
+
+    .socials-section {
+        padding: 20px;
+    }
+
+
+    .socials-btn{
+        font-size: 0.9rem;
+    }
+    .socials-heading{
+        font-size: 1.3rem;
+    }
+
+    .socials-section p{
+        font-size: 0.8rem;
+    }
+
+    footer p{
+        font-size: 0.9rem;
     }
 }
