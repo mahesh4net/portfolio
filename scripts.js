@@ -11,6 +11,13 @@ function toggleMenu(){
     navLinks.classList.toggle('hide')
 }
 
+function closeMenu(){
+    menuToggleBtn.classList.remove('menu-close-btn')
+    navLinks.classList.add('hide')
+}
+
+
+
 
 
 
