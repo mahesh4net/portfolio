@@ -2,23 +2,15 @@
 
 
 
-const menuOpenBtn= document.querySelector('.menu-open')
-const menuCloseBtn= document.querySelector('.menu-close')
+const menuToggleBtn= document.querySelector('.menu-toggle')
 const navLinks= document.querySelector('.nav-links-mobile')
 
 
-function openMenu(){
-    menuOpenBtn.classList.add('hide')
-    menuCloseBtn.classList.remove('hide')
-    navLinks.classList.remove('hide')
-    console.log('hello')
+function toggleMenu(){
+    menuToggleBtn.classList.toggle('menu-close-btn')
+    navLinks.classList.toggle('hide')
 }
-function closeMenu(){
-    menuCloseBtn.classList.add('hide')
-    menuOpenBtn.classList.remove('hide')
-    navLinks.classList.add('hide')
 
-}
 
 
 

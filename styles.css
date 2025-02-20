@@ -124,10 +124,8 @@ border-top: 2px solid rgba(255, 255, 255, 0.195);
 
 
 
-.menu-close:hover{
-    cursor: pointer;
-}
-.menu-open:hover{
+
+.menu-toggle:hover{
     cursor: pointer;
 
 }
@@ -139,14 +137,47 @@ border-top: 2px solid rgba(255, 255, 255, 0.195);
 
 
 
+
+
 .menu-btns li{
 list-style-type: none;
+width: 22px;
+height: 20px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+justify-content: space-between;
+
 }
-.fa-bars{
-    font-size: 1.3rem;
+
+
+.menu-btns li span{
+background-color: white;
+min-width: 100%;
+min-height: 3px;
+border-radius: 4px;
+transition: all 0.15s linear;
+
 }
-.fa-x{
-    font-size: 1.3rem;
+
+.menu-close-btn span:nth-child(1){
+transform: translateY(8px) rotate(45deg);
+transform-origin: center;
+
+
+}
+.menu-close-btn span:nth-child(2){
+opacity: 0;
+
+
+
+}
+.menu-close-btn span:nth-child(3){
+transform: translateY(-8px) rotate(-45deg);
+transform-origin: center;
+
+
+
 }
 
 .hide{
@@ -396,6 +427,7 @@ list-style-type: none;
     border-radius: 50%;
     padding: 1rem;
     border: none;
+ 
     
 }
 .next-btn{
@@ -405,6 +437,14 @@ list-style-type: none;
     padding: 1rem;
     border: none;
     
+}
+
+.prev-btn, .next-btn{
+    max-width: 35px;
+    max-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .next-btn:hover, .prev-btn:hover{
@@ -924,7 +964,7 @@ footer a:hover {
         right: 0;
         bottom: 20px;
         transform: translateY(100%);
-        min-width: 30%;
+        min-width: 200px;
         
         text-align: center;
         background-color: rgb(34, 33, 33);
@@ -1023,6 +1063,23 @@ footer a:hover {
     }
 }
 
+@media (max-width: 600px) {
+    .form-wrapper{
+        padding-inline: 1rem;
+        min-width: 95%;
+    }
+
+    .menu-btns li{
+        list-style-type: none;
+        width: 20px;
+        height: 18px;
+    }
+
+    .skills-section{
+        padding-block: 45px;
+    }
+}
+
 /* Mobile Portrait */
 @media (max-width: 480px) {
     .container {
@@ -1039,12 +1096,12 @@ footer a:hover {
 
 
     .nav-links-mobile{
-        min-width: 50%;
+        min-width: 55%;
 
     }
 
     .hero{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .hero .name {
@@ -1099,6 +1156,8 @@ footer a:hover {
     .about-image {
         width: 250px;
     }
+
+ 
 
     .skills-section .skill-section-title {
         font-size: 1.3rem;
