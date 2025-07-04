@@ -1,550 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- Swiper.js CSS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- Global Container -->
     <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">{<span class="highlight">M</span>}</div>
+        <ul class="nav-links">
+          <li><a href="#hero-section">Home</a></li>
+          <li><a href="#about-section">about</a></li>
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-container">
+          <ul class="nav-links-mobile hide" onclick="closeMenu()">
+            <li><a href="#hero-section">Home</a></li>
+            <li><a href="#about-section">about</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
 
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="logo">{<span class="highlight">M</span>}</div>
-            <ul class="nav-links">
-                <li><a href="#hero-section">Home</a></li>
-                <li><a href="#about-section">about</a></li>
-                <li><a href="#skills-section">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-container">
-                <ul class="nav-links-mobile hide" onclick="closeMenu()">
-                    <li><a href="#hero-section">Home</a></li>
-                    <li><a href="#about-section">about</a></li>
-                    <li><a href="#skills-section">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
-                </ul>
+        <div class="menu-btns">
+          <li class="menu-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+          </li>
+        </div>
+      </nav>
+      <hr class="nav-hr" />
+
+      <!-- Hero Section -->
+      <section class="hero" id="hero-section">
+        <p class="intro-text">Hey there! I'm-</p>
+        <h1 class="name">
+          Mahesh Patel.
+          <span class="name-bg"
+            ><img src="assets/images/name-bg.svg" alt="name-bg"
+          /></span>
+        </h1>
+        <p class="description">
+          <span class="highlight">Web Developer.</span> A self-taught developer
+          with an interest in Computer Science.
+        </p>
+
+        <div class="specialization">
+          <p>
+            🚀 Currently specializing in Frontend <span>(React / Next.js)</span>
+          </p>
+          <p>⚡ Freelance developer at <span class="company">Fiverr.</span></p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="resume-download">
+          <a
+            href="assets\others\Mahesh-Kumar-Resume.pdf"
+            class="btn resume"
+            download=""
+            ><img src="assets/images/download.png" alt="" />Download Resume</a
+          >
+        </div>
+      </section>
+
+      <!-- put next section here -->
+      <!-- About Me Section -->
+      <section class="about" id="about-section">
+        <div class="about-content">
+          <h2 class="section-title">⚡ About Me</h2>
+          <p class="about-text">
+            Hey! I'm Mahesh Patel, a passionate Web developer who loves building
+            interactive web experiences.
+            <br />
+            From exploring the latest frontend technologies to optimizing user
+            interfaces, I enjoy crafting beautiful and efficient applications.
+            I'm currently working as a
+            <span class="highlight">Freelance Web developer</span>, focusing on
+            <span class="highlight">React & Next.js</span>.
+          </p>
+
+          <p class="about-text">
+            When I'm not coding, you'll find me exploring new tech trends,
+            gaming, or watching some great shows on Netflix.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="assets/images/profile-pic2.jpeg" alt="Mahesh Patel" />
+        </div>
+      </section>
+
+      <hr class="nav-hr" />
+      <!-- Skills Section -->
+      <section class="skills-section" id="skills-section">
+        <h2 class="skill-section-title">Skills</h2>
+        <div class="skills-sliders">
+          <div class="text-slider-container">
+            <div class="swiper text-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <h2 class="orange">HTML</h2>
+                  <p>
+                    I have a strong command of HTML and focus on writing clean,
+                    semantic, and accessible code.
+                  </p>
+                  <p>
+                    Ensuring proper SEO, accessibility (ARIA roles), and
+                    performance optimization is my priority.
+                  </p>
+                  <p>
+                    Experience in integrating forms, media elements, and
+                    interactive content for better UX.
+                  </p>
+
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="95"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="blue">CSS</h2>
+                  <p>
+                    My expertise in CSS allows me to create visually appealing
+                    and responsive designs.
+                  </p>
+                  <p>
+                    Proficient in modern CSS features like Flexbox, Grid,
+                    transitions, and animations.
+                  </p>
+                  <p>
+                    Experienced in writing maintainable and scalable CSS using
+                    methodologies like BEM.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="90"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="yellow">JavaScript</h2>
+                  <p>
+                    I develop dynamic and interactive applications using
+                    JavaScript.
+                  </p>
+                  <p>
+                    Strong understanding of ES6+ features, closures,
+                    async/await, and the event loop.
+                  </p>
+                  <p>
+                    Experienced in DOM manipulation, event handling, and working
+                    with APIs.
+                  </p>
+                  <p>
+                    Familiar with optimizing JavaScript code for performance and
+                    scalability.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="80"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="lightblue">Tailwind</h2>
+                  <p>
+                    Using Tailwind CSS, I build modern, fast, and scalable UI
+                    components.
+                  </p>
+                  <p>
+                    Expert in utility-first design principles for rapid
+                    development.
+                  </p>
+                  <p>
+                    Experience in customizing Tailwind’s configuration for
+                    design consistency.
+                  </p>
+                  <p>
+                    Knowledge of performance optimizations like PurgeCSS to
+                    reduce unused styles.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="60"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="blue">TypeScript</h2>
+                  <p>
+                    With TypeScript, I ensure better type safety and
+                    maintainability in projects.
+                  </p>
+                  <p>
+                    Experience in working with interfaces, generics, and
+                    advanced type utilities.
+                  </p>
+                  <p>
+                    Familiar with TypeScript in React applications to reduce
+                    runtime errors.
+                  </p>
+                  <p>
+                    Understanding of how TypeScript improves code scalability
+                    and debugging.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="40"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="lightblue">React</h2>
+                  <p>
+                    I develop modern, scalable web applications using React.js.
+                  </p>
+                  <p>
+                    Expert in functional components, hooks (`useState`,
+                    `useEffect`, `useMemo`, etc.).
+                  </p>
+                  <p>
+                    Familiar with performance optimizations like memoization and
+                    lazy loading.
+                  </p>
+                  <p>
+                    Experience with React Router, Redux, and server-side
+                    rendering (Next.js).
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="80"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="purple">Redux</h2>
+                  <p>
+                    Using Redux, I manage global state efficiently in complex
+                    applications.
+                  </p>
+                  <p>
+                    Experienced in Redux Toolkit, middleware (thunks/sagas), and
+                    persist storage.
+                  </p>
+                  <p>
+                    Familiar with optimizing Redux performance to prevent
+                    unnecessary re-renders.
+                  </p>
+                  <p>
+                    Knowledge of implementing authentication and API data
+                    caching with Redux.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="95"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="green">Node.js</h2>
+                  <p>
+                    With Node.js, I build fast and scalable backend
+                    applications.
+                  </p>
+                  <p>
+                    Understanding of event-driven architecture and asynchronous
+                    programming.
+                  </p>
+                  <p>
+                    Experience in building REST APIs, WebSockets, and real-time
+                    applications.
+                  </p>
+                  <p>
+                    Familiar with integrating third-party services and handling
+                    server-side authentication.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="60"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="">Express.js</h2>
+                  <p>
+                    Using Express.js, I build RESTful APIs and efficient backend
+                    logic.
+                  </p>
+                  <p>
+                    Experience in handling middleware, routing, and request
+                    validation.
+                  </p>
+                  <p>
+                    Familiar with authentication strategies like JWT and OAuth.
+                  </p>
+                  <p>
+                    Knowledge of performance optimizations such as caching and
+                    load balancing.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="70"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="yellow">SQL</h2>
+                  <p>I design and manage relational databases using SQL.</p>
+                  <p>
+                    Experience in writing optimized queries, joins, and stored
+                    procedures.
+                  </p>
+                  <p>
+                    Familiar with database normalization and indexing for
+                    performance.
+                  </p>
+                  <p>
+                    Understanding of ACID properties and transactions for data
+                    integrity.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="40"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="blue">PostgreSQL</h2>
+                  <p>
+                    My expertise in PostgreSQL allows me to handle complex
+                    queries efficiently.
+                  </p>
+                  <p>
+                    Experience in creating schemas, triggers, and stored
+                    procedures.
+                  </p>
+                  <p>
+                    Familiar with indexing strategies and optimizing query
+                    performance.
+                  </p>
+                  <p>
+                    Knowledge of using PostgreSQL with ORMs like Sequelize and
+                    Prisma.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="45"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2 class="orange">Git</h2>
+                  <p>
+                    I use Git for version control and collaborative development.
+                  </p>
+                  <p>
+                    Proficient in branching strategies, merging, and handling
+                    conflicts.
+                  </p>
+                  <p>
+                    Experience with Git workflows for team-based projects (Git
+                    Flow).
+                  </p>
+                  <p>
+                    Knowledge of CI/CD integration using GitHub Actions and
+                    GitLab pipelines.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="40"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h2>GitHub</h2>
+                  <p>
+                    With GitHub, I manage repositories and collaborate on
+                    projects efficiently.
+                  </p>
+                  <p>
+                    Experience in using GitHub Actions for automated deployment
+                    and testing.
+                  </p>
+                  <p>
+                    Familiar with creating pull requests, reviewing code, and
+                    resolving issues.
+                  </p>
+                  <p>
+                    Knowledge of securing repositories and managing permissions
+                    effectively.
+                  </p>
+                  <div class="progress-container">
+                    <p>Progress:</p>
+                    <div class="progress-box">
+                      <div class="progress-bar" progress="50"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="menu-btns">
-                <li class="menu-toggle " onclick="toggleMenu()"><span></span><span></span><span></span></li>
+            <div class="slider-navigations">
+              <button type="button" title="prev" class="prev-btn">
+                <img src="assets/images/prev-arrow.png" alt="prev-btn" />
+              </button>
+              <button type="button" title="next" class="next-btn">
+                <img src="assets/images/next-arrow.png" alt="next-btn" />
+              </button>
             </div>
+          </div>
+          <div class="logo-slider-container">
+            <div class="swiper logo-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/images/html5.svg" alt="html" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/css3.svg" alt="css" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/javascript.svg" alt="javascript" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/tailwind.svg" alt="tailwind" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/typescript.svg" alt="typescript" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/react.svg" alt="react" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/redux.svg" alt="redux" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/nodejs.svg" alt="nodejs" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/icons8-express-js.svg"
+                    alt="express-js"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/Sql_data_base_with_logo.png"
+                    alt="sql"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/postgresql.svg" alt="postgresql" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/git.svg" alt="git" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/github.svg" alt="github" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        </nav>
-        <hr class="nav-hr">
+      <hr class="nav-hr" />
+      <!-- projects section -->
 
-        <!-- Hero Section -->
-        <section class="hero" id="hero-section">
-            <p class="intro-text">Hey there! I'm-</p>
-            <h1 class="name">Mahesh Patel. <span class="name-bg"><img src="assets/images/name-bg.svg"
-                        alt="name-bg"></span></h1>
-            <p class="description">
-                <span class="highlight">Web Developer.</span> A self-taught developer with an
-                interest in Computer Science.
+      <section id="projects">
+        <h2 class="project-section-title">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/m-chat-thumbnail.png"
+              alt="M-Chat Project"
+            />
+          </div>
+          <div class="project-details">
+            <h3>M-Chat</h3>
+            <p>
+              M-Chat is a real-time chat application and my
+              <span class="highlight"> Biggest project ever</span>, it allows
+              users to send messages instantly. It includes features like
+              private messaging, online status indicators, and secure
+              authentication with signup & Login, providing a smooth
+              communication experience between two users. this site is entirely
+              built by me from scratch, no prewrriten code or ui template used.
             </p>
-
-            <div class="specialization">
-                <p>🚀 Currently specializing in Frontend <span>(React / Next.js)</span> </p>
-                <p>⚡ Freelance developer at <span class="company">Fiverr.</span></p>
+            <p>
+              this site is built using React.js, Node.js, Express.js Socket.io
+              and JWT
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/mahesh4net/m-chat-v1.0"
+                target="_blank"
+                class="project-btn github"
+                ><i class="fab fa-github"> </i> GitHub</a
+              >
+              <a
+                href="https://m-chat-v1.vercel.app/"
+                target="_blank"
+                class="project-btn visit"
+                ><i class="fa-solid fa-globe"> </i> Visit Site</a
+              >
             </div>
+          </div>
+        </div>
 
-            <!-- Social Links -->
-            <div class="resume-download">
-                <a href="assets\others\Mahesh-Kumar-Resume.pdf" class="btn resume" download=""><img src="assets/images/download.png" alt="">Download Resume</a>
+        <div class="project">
+          <div class="thumbnail">
+            <img src="assets/images/bitnet.png" alt="BitNet Project" />
+          </div>
+          <div class="project-details">
+            <h3>BitNet</h3>
+            <p>
+              BitNet is a full-stack Node.js link shortener with smart ad pages,
+              real user tracking (IP+UA+time), and a clean analytics dashboard
+              showing countries, devices, and genuine ad views. Built to learn
+              backend tracking and analytics!
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/mahesh4net/bitnet-public"
+                target="_blank"
+                class="project-btn github"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://bitnet1.vercel.app"
+                target="_blank"
+                class="project-btn visit"
+              >
+                <i class="fa-solid fa-globe"></i> Visit Site
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
 
-
-        <!-- put next section here -->
-        <!-- About Me Section -->
-        <section class="about" id="about-section">
-            <div class="about-content">
-                <h2 class="section-title">⚡ About Me</h2>
-                <p class="about-text">
-                    Hey! I'm Mahesh Patel, a passionate Web developer who loves building interactive web experiences.
-                    <br>
-                    From exploring the latest frontend technologies to optimizing user interfaces, I enjoy crafting
-                    beautiful
-                    and efficient applications. I'm currently working as a <span class="highlight">Freelance Web
-                        developer</span>,
-                    focusing on <span class="highlight">React & Next.js</span>.
-                </p>
-
-                <p class="about-text">
-                    When I'm not coding, you'll find me exploring new tech trends, gaming, or watching some great shows
-                    on Netflix.
-                </p>
+        <!-- Project 2 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/taxplaniq-thumbnail.png"
+              alt="TaxPlanIQ Project"
+            />
+          </div>
+          <div class="project-details">
+            <h3>TaxPlanIQ</h3>
+            <p>
+              TaxPlanIQ helps tax professionals create and manage tax plans
+              efficiently. It provides AI-driven tax strategies, automated
+              compliance checks, and financial analytics for better tax
+              planning.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/mahesh4net/taxplaniq"
+                target="_blank"
+                class="project-btn github"
+                ><i class="fab fa-github"> </i> GitHub</a
+              >
+              <a
+                href="https://www.taxplaniq.com/"
+                target="_blank"
+                class="project-btn visit"
+                ><i class="fa-solid fa-globe"> </i> Visit Site</a
+              >
             </div>
+          </div>
+        </div>
 
-            <div class="about-image">
-                <img src="assets/images/profile-pic2.jpeg" alt="Mahesh Patel">
+        <!-- Project 3 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/tik-tak-toe-thumbnail.png"
+              alt="Tik-Tak-Toe Multiplayer"
+            />
+          </div>
+          <div class="project-details">
+            <h3>Tik-Tak-Toe Multiplayer</h3>
+            <p>
+              A fun, interactive multiplayer Tic-Tac-Toe game with real-time
+              gameplay, matchmaking, and private rooms. Built using JavaScript
+              and WebSockets for smooth online play.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/mahesh4net/tik-tak-toe"
+                target="_blank"
+                class="project-btn github"
+                ><i class="fab fa-github"> </i> GitHub</a
+              >
+              <a
+                href="https://mahesh4net.github.io/tik-tak-toe/multiplayer.html"
+                target="_blank"
+                class="project-btn visit"
+                ><i class="fa-solid fa-globe"> </i> Visit Site</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
 
-        <hr class="nav-hr">
-        <!-- Skills Section -->
-        <section class="skills-section" id="skills-section">
-            <h2 class="skill-section-title">Skills</h2>
-            <div class="skills-sliders">
-                <div class="text-slider-container">
-                    <div class="swiper text-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide ">
-                                <h2 class="orange">HTML</h2>
-                                <p>I have a strong command of HTML and focus on writing clean, semantic, and accessible
-                                    code.</p>
-                                <p>Ensuring proper SEO, accessibility (ARIA roles), and performance optimization is my
-                                    priority.</p>
-                                <p>Experience in integrating forms, media elements, and interactive content for better
-                                    UX.</p>
-
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="95"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="blue">CSS</h2>
-                                <p>My expertise in CSS allows me to create visually appealing and responsive designs.
-                                </p>
-                                <p>Proficient in modern CSS features like Flexbox, Grid, transitions, and animations.
-                                </p>
-                                <p>Experienced in writing maintainable and scalable CSS using methodologies like BEM.
-                                </p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="90"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="yellow">JavaScript</h2>
-                                <p>I develop dynamic and interactive applications using JavaScript.</p>
-                                <p>Strong understanding of ES6+ features, closures, async/await, and the event loop.</p>
-                                <p>Experienced in DOM manipulation, event handling, and working with APIs.</p>
-                                <p>Familiar with optimizing JavaScript code for performance and scalability.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="80"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="lightblue">Tailwind</h2>
-                                <p>Using Tailwind CSS, I build modern, fast, and scalable UI components.</p>
-                                <p>Expert in utility-first design principles for rapid development.</p>
-                                <p>Experience in customizing Tailwind’s configuration for design consistency.</p>
-                                <p>Knowledge of performance optimizations like PurgeCSS to reduce unused styles.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="60"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="blue">TypeScript</h2>
-                                <p>With TypeScript, I ensure better type safety and maintainability in projects.</p>
-                                <p>Experience in working with interfaces, generics, and advanced type utilities.</p>
-                                <p>Familiar with TypeScript in React applications to reduce runtime errors.</p>
-                                <p>Understanding of how TypeScript improves code scalability and debugging.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="40"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="lightblue">React</h2>
-                                <p>I develop modern, scalable web applications using React.js.</p>
-                                <p>Expert in functional components, hooks (`useState`, `useEffect`, `useMemo`, etc.).
-                                </p>
-                                <p>Familiar with performance optimizations like memoization and lazy loading.</p>
-                                <p>Experience with React Router, Redux, and server-side rendering (Next.js).</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="80"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="purple">Redux</h2>
-                                <p>Using Redux, I manage global state efficiently in complex applications.</p>
-                                <p>Experienced in Redux Toolkit, middleware (thunks/sagas), and persist storage.</p>
-                                <p>Familiar with optimizing Redux performance to prevent unnecessary re-renders.</p>
-                                <p>Knowledge of implementing authentication and API data caching with Redux.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="95"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="green">Node.js</h2>
-                                <p>With Node.js, I build fast and scalable backend applications.</p>
-                                <p>Understanding of event-driven architecture and asynchronous programming.</p>
-                                <p>Experience in building REST APIs, WebSockets, and real-time applications.</p>
-                                <p>Familiar with integrating third-party services and handling server-side
-                                    authentication.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="60"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="">Express.js</h2>
-                                <p>Using Express.js, I build RESTful APIs and efficient backend logic.</p>
-                                <p>Experience in handling middleware, routing, and request validation.</p>
-                                <p>Familiar with authentication strategies like JWT and OAuth.</p>
-                                <p>Knowledge of performance optimizations such as caching and load balancing.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="70"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="yellow">SQL</h2>
-                                <p>I design and manage relational databases using SQL.</p>
-                                <p>Experience in writing optimized queries, joins, and stored procedures.</p>
-                                <p>Familiar with database normalization and indexing for performance.</p>
-                                <p>Understanding of ACID properties and transactions for data integrity.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="40"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="blue">PostgreSQL</h2>
-                                <p>My expertise in PostgreSQL allows me to handle complex queries efficiently.</p>
-                                <p>Experience in creating schemas, triggers, and stored procedures.</p>
-                                <p>Familiar with indexing strategies and optimizing query performance.</p>
-                                <p>Knowledge of using PostgreSQL with ORMs like Sequelize and Prisma.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="45"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2 class="orange">Git</h2>
-                                <p>I use Git for version control and collaborative development.</p>
-                                <p>Proficient in branching strategies, merging, and handling conflicts.</p>
-                                <p>Experience with Git workflows for team-based projects (Git Flow).</p>
-                                <p>Knowledge of CI/CD integration using GitHub Actions and GitLab pipelines.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="40"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <h2>GitHub</h2>
-                                <p>With GitHub, I manage repositories and collaborate on projects efficiently.</p>
-                                <p>Experience in using GitHub Actions for automated deployment and testing.</p>
-                                <p>Familiar with creating pull requests, reviewing code, and resolving issues.</p>
-                                <p>Knowledge of securing repositories and managing permissions effectively.</p>
-                                <div class="progress-container">
-                                    <p>Progress:</p>
-                                    <div class="progress-box">
-                                        <div class="progress-bar" progress="50"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="slider-navigations">
-                        <button type="button" title="prev" class="prev-btn"><img src="assets/images/prev-arrow.png"
-                                alt="prev-btn"></button>
-                        <button type="button" title="next" class="next-btn"><img src="assets/images/next-arrow.png"
-                                alt="next-btn"></button>
-                    </div>
-                </div>
-                <div class="logo-slider-container">
-                    <div class="swiper logo-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/images/html5.svg" alt="html"></div>
-                            <div class="swiper-slide"><img src="assets/images/css3.svg" alt="css"></div>
-                            <div class="swiper-slide"><img src="assets/images/javascript.svg" alt="javascript"></div>
-                            <div class="swiper-slide"><img src="assets/images/tailwind.svg" alt="tailwind"></div>
-                            <div class="swiper-slide"><img src="assets/images/typescript.svg" alt="typescript"></div>
-                            <div class="swiper-slide"><img src="assets/images/react.svg" alt="react"></div>
-                            <div class="swiper-slide"><img src="assets/images/redux.svg" alt="redux"></div>
-                            <div class="swiper-slide"><img src="assets/images/nodejs.svg" alt="nodejs"></div>
-                            <div class="swiper-slide"><img src="assets/images/icons8-express-js.svg" alt="express-js">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/images/Sql_data_base_with_logo.png" alt="sql">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/images/postgresql.svg" alt="postgresql"></div>
-                            <div class="swiper-slide"><img src="assets/images/git.svg" alt="git"></div>
-                            <div class="swiper-slide"><img src="assets/images/github.svg" alt="github"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="nav-hr">
-        <!-- projects section -->
-
-        <section id="projects">
-
-            <h2 class="project-section-title">Projects</h2>
-
-            <!-- Project 1 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/m-chat-thumbnail2.png" alt="M-Chat Project">
-                </div>
-                <div class="project-details">
-                    <h3>M-Chat</h3>
-                    <p>M-Chat is a real-time chat application and my <span class="highlight"> Biggest project
-                            ever</span>, it allows users to send messages instantly. It includes
-                        features like private messaging, online status indicators, and secure authentication with signup
-                        & Login, providing
-                        a smooth communication experience between two users. this site is entirely built by me from
-                        scratch, no prewrriten code or ui template used.</p>
-                    <p>this site is built using React.js, Node.js, Express.js Socket.io and JWT</p>
-                    <div class="project-links">
-                        <a href="https://github.com/mahesh4net/m-chat-v1.0" target="_blank"
-                            class="project-btn github"><i class="fab fa-github"> </i> GitHub</a>
-                        <a href="https://m-chat-v1.vercel.app/" target="_blank" class="project-btn visit"><i
-                                class="fa-solid fa-globe"> </i> Visit Site</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/taxplaniq-thumbnail.png" alt="TaxPlanIQ Project">
-                </div>
-                <div class="project-details">
-                    <h3>TaxPlanIQ</h3>
-                    <p>TaxPlanIQ helps tax professionals create and manage tax plans efficiently. It provides AI-driven
-                        tax strategies, automated compliance checks, and financial analytics for better tax planning.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/mahesh4net/taxplaniq" target="_blank" class="project-btn github"><i
-                                class="fab fa-github"> </i> GitHub</a>
-                        <a href="https://www.taxplaniq.com/" target="_blank" class="project-btn visit"><i
-                                class="fa-solid fa-globe"> </i> Visit Site</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/tik-tak-toe-thumbnail.png" alt="Tik-Tak-Toe Multiplayer">
-                </div>
-                <div class="project-details">
-                    <h3>Tik-Tak-Toe Multiplayer</h3>
-                    <p>A fun, interactive multiplayer Tic-Tac-Toe game with real-time gameplay, matchmaking, and private
-                        rooms. Built using JavaScript and WebSockets for smooth online play.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/mahesh4net/tik-tak-toe" target="_blank"
-                            class="project-btn github"><i class="fab fa-github"> </i> GitHub</a>
-                        <a href="https://mahesh4net.github.io/tik-tak-toe/multiplayer.html" target="_blank"
-                            class="project-btn visit"><i class="fa-solid fa-globe"> </i> Visit Site</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/edugetglobal-thumbnail.png" alt="Eduget Global">
-                </div>
-                <div class="project-details">
-                    <h3>Eduget Global</h3>
-                    <p>Eduget Global is a platform that helps students apply for international universities. It offers
-                        application tracking, visa assistance, and expert consultations for hassle-free study abroad
-                        experiences.</p>
-                    <div class="project-links">
-                        <!-- <a href="https://github.com/mahesh4net/edugetglobal" target="_blank"
+        <!-- Project 4 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/edugetglobal-thumbnail.png"
+              alt="Eduget Global"
+            />
+          </div>
+          <div class="project-details">
+            <h3>Eduget Global</h3>
+            <p>
+              Eduget Global is a platform that helps students apply for
+              international universities. It offers application tracking, visa
+              assistance, and expert consultations for hassle-free study abroad
+              experiences.
+            </p>
+            <div class="project-links">
+              <!-- <a href="https://github.com/mahesh4net/edugetglobal" target="_blank"
                             class="project-btn github">GitHub</a> -->
-                        <a href="https://edugetglobal.com/" target="_blank" class="project-btn visit"><i
-                                class="fa-solid fa-globe"> </i> Visit Site</a>
-                    </div>
-                </div>
+              <a
+                href="https://edugetglobal.com/"
+                target="_blank"
+                class="project-btn visit"
+                ><i class="fa-solid fa-globe"> </i> Visit Site</a
+              >
             </div>
+          </div>
+        </div>
 
-            <!-- Project 5 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/immigetglobal-thumbnail.png" alt="Immiget Global">
-                </div>
-                <div class="project-details">
-                    <h3>Immiget Global</h3>
-                    <p>Immiget Global is an immigration assistance platform that helps individuals with visa
-                        applications, job placements, and legal documentation for moving abroad.</p>
-                    <div class="project-links">
-                        <!-- <a href="https://github.com/mahesh4net/immigetglobal" target="_blank"
+        <!-- Project 5 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/immigetglobal-thumbnail.png"
+              alt="Immiget Global"
+            />
+          </div>
+          <div class="project-details">
+            <h3>Immiget Global</h3>
+            <p>
+              Immiget Global is an immigration assistance platform that helps
+              individuals with visa applications, job placements, and legal
+              documentation for moving abroad.
+            </p>
+            <div class="project-links">
+              <!-- <a href="https://github.com/mahesh4net/immigetglobal" target="_blank"
                             class="project-btn github">GitHub</a> -->
-                        <a href="https://www.immigetglobal.com/" target="_blank" class="project-btn visit"><i
-                                class="fa-solid fa-globe"> </i> Visit
-                            Site</a>
-                    </div>
-                </div>
+              <a
+                href="https://www.immigetglobal.com/"
+                target="_blank"
+                class="project-btn visit"
+                ><i class="fa-solid fa-globe"> </i> Visit Site</a
+              >
             </div>
-            <!-- Project 6 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/crypto-price-thumbnail.png" alt="crypto-price-thumbnail">
-                </div>
-                <div class="project-details">
-                    <h3>Crypto Price</h3>
-                    <p>crpto price checker is a api based project site built by me, this site uses a web crypto api to
-                        get latest live prices of a crypto currency and display them on screen, you can search any cryto
-                        there and get their total market cap, current price and price trend etc.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/mahesh4net/crypto-price" target="_blank"
-                            class="project-btn github"><i class="fab fa-github"> </i> GitHub</a>
-                        <a href="https://mahesh4net.github.io/crypto-price" target="_blank" class="project-btn visit"><i
-                                class="fa-solid fa-globe"> </i> Visit Site</a>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/vdr-thumbnail.png"
+              alt="Virtual Deal Room Project"
+            />
+          </div>
+          <div class="project-details">
+            <h3>Virtual Deal Room (VDR)</h3>
+            <p>
+              A full-stack MERN application where buyers and sellers negotiate
+              real-time deals. Features: role-based dashboards, item listings,
+              real-time chat, deal tracking, secure JWT auth, and a clean,
+              modern UI with 3D design elements.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/mahesh4net/virtual-deal-room"
+                target="_blank"
+                class="project-btn github"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://virtual-deal-room-v8.vercel.app"
+                target="_blank"
+                class="project-btn visit"
+              >
+                <i class="fa-solid fa-globe"></i> Visit Site
+              </a>
             </div>
-            <!-- Project 7 -->
-            <div class="project">
-                <div class="thumbnail">
-                    <img src="assets/images/email-sender-thumbnail.png" alt="email-sender-thumbnail">
-                </div>
-                <div class="project-details">
-                    <h3>Global Email Sender</h3>
-                    <p>global email sender is a email sender service built by me for practicing nodejs, this app uses
-                        nodemailer and node js in backend to send emails to targeted email users, i added a feature to
-                        also incclude and attach image files if you want, also there is a proper error handling applied
-                        for handling errors in edge cases</p>
-                    <div class="project-links">
-                        <a href="https://github.com/mahesh4net/global-email-sender" target="_blank"
-                            class="project-btn github"><i class="fab fa-github"> </i> GitHub</a>
-                        <a href="https://mahesh4net.github.io/global-email-sender" target="_blank"
-                            class="project-btn visit"><i class="fa-solid fa-globe"> </i> Visit Site</a>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project">
+          <div class="thumbnail">
+            <img
+              src="assets/images/email-sender-thumbnail.png"
+              alt="email-sender-thumbnail"
+            />
+          </div>
+          <div class="project-details">
+            <h3>Global Email Sender</h3>
+            <p>
+              global email sender is a email sender service built by me for
+              practicing nodejs, this app uses nodemailer and node js in backend
+              to send emails to targeted email users, i added a feature to also
+              incclude and attach image files if you want, also there is a
+              proper error handling applied for handling errors in edge cases
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/mahesh4net/global-email-sender"
+                target="_blank"
+                class="project-btn github"
+                ><i class="fab fa-github"> </i> GitHub</a
+              >
+              <a
+                href="https://mahesh4net.github.io/global-email-sender"
+                target="_blank"
+                class="project-btn visit"
+                ><i class="fa-solid fa-globe"> </i> Visit Site</a
+              >
             </div>
+          </div>
+        </div>
+      </section>
 
+      <hr class="nav-hr" />
 
-        </section>
+      <section class="contact-me" id="contact-section">
+        <div class="contact-section">
+          <div class="form-wrapper">
+            <h2>Contact Me</h2>
+            <p>Fill up the form below to send me a message.</p>
+            <form method="POST" id="form">
+              <input
+                type="hidden"
+                name="access_key"
+                value="e0a28165-5d49-4d04-b649-fadec06c83ca"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Submission from Web3Forms"
+              />
+              <input type="checkbox" name="botcheck" style="display: none" />
 
-        <hr class="nav-hr">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" placeholder="John Doe" />
+              <span class="error-message" id="name-error"></span>
 
-        <section class="contact-me" id="contact-section">
-            <div class="contact-section">
-                <div class="form-wrapper">
-                    <h2>Contact Me</h2>
-                    <p>Fill up the form below to send me a message.</p>
-                    <form method="POST" id="form">
-                        <input type="hidden" name="access_key" value="e0a28165-5d49-4d04-b649-fadec06c83ca" />
-                        <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                        <input type="checkbox" name="botcheck" style="display: none;" />
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@company.com"
+              />
+              <span class="error-message" id="email-error"></span>
 
-                        <label for="name">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="John Doe" />
-                        <span class="error-message" id="name-error"></span>
+              <label for="phone">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+1 (555) 1234-567"
+              />
+              <span class="error-message" id="phone-error"></span>
 
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="you@company.com" />
-                        <span class="error-message" id="email-error"></span>
+              <label for="message">Your Message</label>
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Your Message"
+              ></textarea>
+              <span class="error-message" id="message-error"></span>
 
-                        <label for="phone">Phone Number</label>
-                        <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" />
-                        <span class="error-message" id="phone-error"></span>
+              <button type="submit">
+                <span id="submit-text">Submit</span>
+                <div id="spinner" class="spinner" style="display: none"></div>
+              </button>
 
-                        <label for="message">Your Message</label>
-                        <textarea rows="5" name="message" id="message" placeholder="Your Message"></textarea>
-                        <span class="error-message" id="message-error"></span>
+              <p id="result"></p>
+            </form>
+          </div>
+        </div>
+      </section>
 
-                        <button type="submit"><span id="submit-text">Submit</span>
-                            <div id="spinner" class="spinner" style="display: none;"></div>
-                        </button>
+      <hr class="nav-hr" />
 
-                        <p id="result"></p>
-                    </form>
-                </div>
-            </div>
-        </section>
+      <!-- socials section -->
+      <section class="socials-section" id="socials-section">
+        <h2 class="socials-heading">My Socials</h2>
+        <p>you can contact me on this plateforms</p>
+        <div class="socials-container">
+          <a
+            href="https://github.com/mahesh4net"
+            target="_blank"
+            class="socials-btn github"
+          >
+            <i class="fab fa-github"></i> @mahesh4net
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mahesh4net"
+            target="_blank"
+            class="socials-btn linkedin"
+          >
+            <i class="fab fa-linkedin"></i> @mahesh4net
+          </a>
+          <a
+            href="https://www.instagram.com/iam_mahesh_choudhary"
+            target="_blank"
+            class="socials-btn instagram"
+          >
+            <i class="fab fa-instagram"></i> @iam_mahesh_choudhary
+          </a>
+          <a
+            href="mailto:mahesh4netbusiness@gmail.com"
+            class="socials-btn email"
+          >
+            <i class="fas fa-envelope"></i> mahesh4netbusiness@gmail.com
+          </a>
+        </div>
+      </section>
 
-
-
-
-        <hr class="nav-hr">
-
-        <!-- socials section -->
-        <section class="socials-section" id="socials-section">
-            <h2 class="socials-heading">My Socials</h2>
-            <p>you can contact me on this plateforms</p>
-            <div class="socials-container">
-                <a href="https://github.com/mahesh4net" target="_blank" class="socials-btn github">
-                    <i class="fab fa-github"></i> @mahesh4net
-                </a>
-                <a href="https://www.linkedin.com/in/mahesh4net" target="_blank" class="socials-btn linkedin">
-                    <i class="fab fa-linkedin"></i> @mahesh4net
-                </a>
-                <a href="https://www.instagram.com/iam_mahesh_choudhary" target="_blank" class="socials-btn instagram">
-                    <i class="fab fa-instagram"></i> @iam_mahesh_choudhary
-                </a>
-                <a href="mailto:mahesh4netbusiness@gmail.com" class="socials-btn email">
-                    <i class="fas fa-envelope"></i> mahesh4netbusiness@gmail.com
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer Section -->
-
-
-
-    </div> <!-- End of Global Container -->
+      <!-- Footer Section -->
+    </div>
+    <!-- End of Global Container -->
     <footer>
-        <p>&copy; 2025 <span>Mahesh4net</span>. All rights reserved.</p>
+      <p>&copy; 2025 <span>Mahesh4net</span>. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>
